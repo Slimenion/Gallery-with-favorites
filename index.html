@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!--Подключение шрифтов с google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+        <!--Подключение основного файла css-->
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Галерея</title>
+    </head>
+    <body>
+        <!--Сам модуль галереи-->
+        <div class="flex_start_column gallery">
+            <!--Навигация-->
+            <nav class="flex_start_column">
+                <div
+                    id="catalog_button"
+                    class="flex_start_column font_roboto nav_button hover"
+                >
+                    Каталог
+                </div>
+                <div
+                    id="favorite_button"
+                    class="flex_start_column font_roboto nav_button"
+                >
+                    Избранное
+                </div>
+            </nav>
+            <!--Контейнер с каталогом и избранным-->
+            <div class="container">
+                <!--Каталог-->
+                <div class="catalog"></div>
+                <!--Избранное-->
+                <div class="favorite">
+                    <div id="empty" class="container">
+                        <div class="flex_start_column content">
+                            <img src="img/empty.png" />
+                            <p class="font_roboto title">
+                                Список избранного пуст
+                            </p>
+                            <p class="font_roboto sub_title">
+                                Добавляйте изображения нажимая на звездочки
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid favorite_images_hover"></div>
+                </div>
+            </div>
+        </div>
+        <!--Шаблон для пользователей-->
+        <template id="user">
+            <div class="user">
+                <div class="font_roboto user_name">
+                    <img src="img/Open.svg" />
+                    <p>Test user</p>
+                </div>
+            </div>
+        </template>
+        <!--Шаблон для альбомов пользователей-->
+        <template id="albom_user">
+            <div class="albom_user">
+                <div class="font_roboto flex_start_column albom_user_container">
+                    <div class="albom_user_title">
+                        <img src="img/Open.svg" />
+                        <span>Test albom</span>
+                    </div>
+                    <div class="grid images"></div>
+                </div>
+            </div>
+        </template>
+        <!--Шаблон для изображений внутри альбома-->
+        <template id="images_user">
+            <div class="flex_start_column small_image image_main" title="">
+                <img class="image_star" src="img/star_empty.png" />
+            </div>
+        </template>
+        <!--Шаблон для изображений в избранном-->
+        <template id="favorite_image">
+            <div class="flex_start_column title_image">
+                <div
+                    class="flex_start_column small_image image_main fav_image"
+                    title=""
+                >
+                    <img class="image_star" src="img/star_active.png" />
+                </div>
+                <p class="font_roboto title_favorite">Test title image</p>
+            </div>
+        </template>
+        <!--Шаблон для открытия картинки в полном размере-->
+        <template id="image_full">
+            <div class="image_full">
+                <img class="image" src="" />
+                <img class="close" src="img/Close_modal.svg" />
+            </div>
+        </template>
+        <!--Подключение основного js скрипта-->
+        <script src="js/script_gallery.js"></script>
+    </body>
+</html>

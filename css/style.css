@@ -1,0 +1,171 @@
+/*классы повторяющиеся в элементах*/
+.flex_start_column {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.font_roboto {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    color: #1c1c1c;
+}
+
+.nav_button {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px 8px 0px 0px;
+    font-size: 18px;
+}
+
+.hover {
+    background: #edf9ff;
+    border-radius: 16px;
+    color: #117dc1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 42px;
+}
+
+.small_image {
+    width: 150px;
+    height: 150px;
+}
+
+.image_full {
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.47);
+    width: 100%;
+    height: 100%;
+}
+
+.image_full > .close {
+    position: fixed;
+    right: 40px;
+    top: 32px;
+}
+
+.image_full > .image {
+    z-index: 2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*классы для отдельных элементов*/
+/*кнопки навигации*/
+.gallery {
+    padding: 50px 150px;
+}
+
+.gallery > nav {
+    flex-direction: row;
+    width: 744px;
+    height: 55px;
+}
+
+/*Вкладка каталог*/
+.gallery > .container {
+    padding: 16px 0px;
+    width: 744px;
+    background: #ffffff;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.user_name {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 22px;
+    height: 80px;
+}
+
+.user_name > img {
+    padding-right: 24px;
+    width: 32px;
+    height: 32px;
+}
+
+.albom_user {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.albom_user_container > .albom_user_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.albom_user_container > .albom_user_title > img {
+    padding-right: 24px;
+}
+
+.albom_user_container > .images {
+    display: none;
+    padding: 32px 105px;
+}
+
+.albom_user_title {
+    height: 80px;
+    padding-left: 56px;
+}
+
+.image_main {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#empty {
+    display: none;
+}
+
+.image_star {
+    padding: 8px;
+    width: 32px;
+    height: 32px;
+}
+
+.favorite_images_hover {
+    padding: 56px 105px;
+}
+
+.small_image > p {
+    padding-top: 12px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 150%;
+    color: #787878;
+}
+
+/*Вкладка избранное*/
+.gallery > .container > .favorite > .container {
+    padding: 0px;
+}
+
+.gallery > .container > .favorite > .container > .content {
+    padding: 206px 55px 303px 55px;
+    align-items: center;
+}
+
+.gallery > .container > .favorite > .container > .content > .title {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.gallery > .container > .favorite > .container > .content > .sub_title {
+    font-size: 18px;
+}
