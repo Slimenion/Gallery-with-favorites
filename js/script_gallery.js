@@ -111,7 +111,7 @@ function loadFullImage(e) {
             .querySelector(".image_full")
             .querySelector(".close")
             .addEventListener("click", (e) => {
-                currentElem.parentNode.remove();
+                e.target.parentNode.remove();
             });
     }
 }
