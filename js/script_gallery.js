@@ -40,6 +40,10 @@ function makeHover(e) {
             if (userFavorite.length == 0) {
                 //избранных нет, вставляем заглушку
                 document.querySelector("#empty").style.display = "block";
+                const oldFavorites = document.querySelectorAll(".fav_image");
+                oldFavorites.forEach((elem) => {
+                    elem.parentNode.remove();
+                });
             } else {
                 //стираем
                 const oldFavorites = document.querySelectorAll(".fav_image");
